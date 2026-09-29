@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    image: lct-dispatcher
+    ports:
+      - "${PORT:-8000}:8000"
+    environment:
+      # osrm — расстояния по дорогам (нужен интернет); haversine — по прямой с коэффициентом, без OSRM
+      ROUTING: ${ROUTING:-osrm}
+    volumes:
+      # кэши геокодера и OSRM общие с локальным запуском и переживают пересборку контейнера
+      - ./data:/app/data
+    restart: unless-stopped

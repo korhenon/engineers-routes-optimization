@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Диспетчер выездных инженеров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"><svg class="i" viewBox="0 0 24 24"><path d="M12 2.5 21 7v10l-9 4.5L3 17V7z"/><path d="M12 12 21 7M12 12v9.5M12 12 3 7"/></svg></span>
+      <div><b>Диспетчер</b><small>выездные инженеры</small></div>
+    </div>
+
+    <div class="group">
+      <label class="field"><span>Участок</span><select id="area"></select></label>
+      <button id="upload-btn" class="btn icon" title="Свои заявки (CSV) и/или инженеры (JSON)" aria-label="Загрузить данные">
+        <svg class="i" viewBox="0 0 24 24"><path d="M12 15V4m0 0-4 4m4-4 4 4M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
+      </button>
+    </div>
+
+    <div class="group">
+      <label class="field narrow" title="Лимит времени оптимизатора, секунд"><span>Лимит, с</span>
+        <input id="time-limit" type="number" min="1" max="120" value="30"></label>
+      <button id="plan-btn" class="btn primary">Спланировать</button>
+    </div>
+
+    <div class="segmented" id="algo-toggle">
+      <button data-algo="optimized" disabled>Оптимизированный</button>
+      <button data-algo="baseline" disabled>Базовый</button>
+    </div>
+    <button id="event-btn" class="btn" disabled>
+      <svg class="i" viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg>Событие
+    </button>
+
+    <div class="status-area">
+      <span id="now"></span>
+      <span id="timer" title="Длительность последней операции"></span>
+      <span id="status"></span>
+    </div>
+  </header>
+
+  <section id="metrics" class="kpis"></section>
+
+  <main>
+    <aside id="left">
+      <p id="summary" class="summary"></p>
+      <h2>Инженеры <small id="eng-count" class="count"></small></h2>
+      <ul id="engineers" class="list"></ul>
+      <h2>Не назначены <small id="unassigned-count" class="count"></small></h2>
+      <ul id="unassigned" class="list"></ul>
+    </aside>
+    <div id="map"></div>
+    <aside id="card"></aside>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+[
+ {
+  "id": "E01",
+  "name": "Макаров Н.",
+  "shift_start": 600,
+  "shift_end": 1140,
+  "skills": [
+   1,
+   3
+  ],
+  "transport": 1
+ },
+ {
+  "id": "E02",
+  "name": "Степанов Т.",
+  "shift_start": 780,
+  "shift_end": 1320,
+  "skills": [
+   2
+  ],
+  "transport": 4
+ },
+ {
+  "id": "E03",
+  "name": "Васильев А.",
+  "shift_start": 780,
+  "shift_end": 1320,
+  "skills": [
+   1,
+   2,
+   3
+  ],
+  "transport": 1
+ },
+ {
+  "id": "E04",
+  "name": "Орлов Т.",
+  "shift_start": 540,
+  "shift_end": 1080,
+  "skills": [
+   1,
+   2,
+   3
+  ],
+  "transport": 1
+ },
+ {
+  "id": "E05",
+  "name": "Волков П.",
+  "shift_start": 600,
+  "shift_end": 1140,
+  "skills": [
+   1,
+   2
+  ],
+  "transport": 3
+ },
+ {
+  "id": "E06",
+  "name": "Никитин Л.",
+  "shift_start": 540,
+  "shift_end": 1080,
+  "skills": [
+   2
+  ],
+  "transport": 1
+ },
+ {
+  "id": "E07",
+  "name": "Егоров А.",
+  "shift_start": 600,
+  "shift_end": 1140,
+  "skills": [
+   1
+  ],
+  "transport": 2
+ },
+ {
+  "id": "E08",
+  "name": "Новиков Б.",
+  "shift_start": 600,
+  "shift_end": 1140,
+  "skills": [
+   2
+  ],
+  "transport": 4
+ },
+ {
+  "id": "E09",
+  "name": "Андреев П.",
+  "shift_start": 540,
+  "shift_end": 1080,
+  "skills": [
+   1
+  ],
+  "transport": 4
+ },
+ {
+  "id": "E10",
+  "name": "Смирнов Д.",
+  "shift_start": 780,
+  "shift_end": 1320,
+  "skills": [
+   1,
+   2
+  ],
+  "transport": 4
+ }
+]
