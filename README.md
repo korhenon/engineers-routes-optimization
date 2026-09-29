@@ -36,7 +36,6 @@
 Нужен Docker с Compose v2.
 
 ```bash
-git clone <url-репозитория> && cd LCT
 docker compose up --build
 ```
 
